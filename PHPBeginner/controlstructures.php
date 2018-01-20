@@ -17,6 +17,29 @@ echo 'three is less than 10';
     echo 'it is not';
 }
 
+//COMPARISON AND LOGICAL OPERATORS
+
+//SWITCH STATEMENTS
+
+$number = 24;
+
+switch () {
+    case 34:
+        echo 'it is 34';
+        break;
+    case 37:
+        echo 'it is 37';
+        break;
+    case 24:
+        echo 'it is 24';
+        break;
+    case 15:
+        echo 'it is 15';
+        break;
+    default:
+        echo "i can't find the number";
+}
+
 ?>
 </body>
 </html>
