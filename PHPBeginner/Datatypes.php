@@ -40,7 +40,19 @@ echo $numberList[0];
 
 <?php
 
+$number = array('Dawn', 'Finn', 'Sierra');
 
+//print_r($number);
+
+echo "<br>";
+
+$names = array("first_name" => "Patrick", "last_name" => "McMahon");
+
+//print_r ($names);
+
+//INVOLVES KEY VALUE
+
+echo $names['first_name'] . " " . $names['last_name'];
 
 ?>
 </body>
