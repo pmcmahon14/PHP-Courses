@@ -40,6 +40,30 @@ switch () {
         echo "i can't find the number";
 }
 
+//WHILE LOOP
+
+$i = 0;
+
+while($i < 10){
+    //echo "hello student";
+    echo $1;
+    $i++;
+}
+
+//FOR LOOP
+
+for($counter = 0; $counter < 10; $counter++){
+echo $counter . "<br>";
+}
+
+//FOR EACH - ARRAYS
+
+$numbers = array(345,664,24,48,42,78);
+
+foreach ($numbers as $number) {
+echo $number . "<br>";
+}
+
 ?>
 </body>
 </html>
