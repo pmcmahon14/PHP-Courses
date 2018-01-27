@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST['submit'])) {
+/*if (isset($_POST['submit'])) {
 
     //TEST ARRAY
     $name = array("Patrick", "Dawn", "Sierra", "Finn");
@@ -35,7 +35,7 @@ echo $username;
         echo "Welcome!";
     }
 
-}
+}*/
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +46,8 @@ echo $username;
 </head>
 <body>
 
-<form action="formdata.php" method="post">
+<!--<form action="formdata.php" method="post">-->
+<form action="formprocess.php" method="post">
     <input type="text" name="username" placeholder="Enter Username">
     <input type="password" name="password" placeholder="Enter Password">
     <input type="submit" name="submit">
