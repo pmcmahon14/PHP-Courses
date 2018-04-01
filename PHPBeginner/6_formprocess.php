@@ -12,8 +12,8 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    echo $password;
     echo $username;
+    echo $password;
 
 //VALIDATION
 
@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
 
     }
 
-    if(strlen($username) < $maximum) {
+    if(strlen($username) >  $maximum) {
 
         echo "Username has to be shorter than 10.";
 

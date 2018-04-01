@@ -1,6 +1,10 @@
 <?php
 
-/*if (isset($_POST['submit'])) {
+//POSITIONED HERE TO RUN FIRST AFTER SUBMISSION
+
+if (isset($_POST['submit'])) {
+
+    //echo "yes it works";
 
     //TEST ARRAY
     $name = array("Patrick", "Dawn", "Sierra", "Finn");
@@ -12,8 +16,8 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-echo $password;
-echo $username;
+//echo "Hello ". $username;
+//echo "Your password is ". $password;
 
 //VALIDATION
 
@@ -23,11 +27,13 @@ echo $username;
 
     }
 
-    if(strlen($username) < $maximum) {
+    if(strlen($username) > $maximum) {
 
         echo "Username has to be shorter than 10.";
 
     }
+
+    //TEST TO SEE IF INPUTS MATCH NAME ARRAY ABOVE
 
     if(!in_array($username, $name)) {
         echo "Sorry, you are not allowed to log in.";
@@ -35,7 +41,7 @@ echo $username;
         echo "Welcome!";
     }
 
-}*/
+}
 ?>
 
 <!DOCTYPE html>
@@ -46,10 +52,10 @@ echo $username;
 </head>
 <body>
 
-<!--<form action="formdata.php" method="post">-->
-<form action="formprocess.php" method="post">
-    <input type="text" name="username" placeholder="Enter Username">
-    <input type="password" name="password" placeholder="Enter Password">
+<!--<form action="6_formdata.php" method="post">-->
+<form action="6_formprocess.php" method="post">
+    <input type="text" name="username" placeholder="Enter Username"><br>
+    <input type="password" name="password" placeholder="Enter Password"><br>
     <input type="submit" name="submit">
 
 </form>
