@@ -7,7 +7,7 @@ if(isset($_POST['submit'])) {
     $password = $_POST['password'];
 
 //NOTE: FOR MAMP, PASSWORD IS ROOT!
-    $connection = mysqli_connect('localhost', 'root', 'root', 'loginapp');
+    $connection = mysqli_init('localhost', 'root', 'root', 'loginapp');
 
     if($connection) {
         echo "We have a connection";
