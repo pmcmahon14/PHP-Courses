@@ -1,5 +1,6 @@
 <?php
 
+//USING CRUD
 
 if(isset($_POST['submit'])) {
 
@@ -15,6 +16,16 @@ if(isset($_POST['submit'])) {
         die("Database connection failed.");
     }
 
+    //USE INSERT INTO COMMAND TO ADD DATA INTO MYSQL, THEN CONCATENATE
+    $query = "INSERT INTO users(username, password) ";
+    $query .="VALUES('$username', '$password')";
+
+    //SQL QUERY TAKES TWO ARGUMENTS, FIRST THE CONNECTION TO DATABASE, THEN WHAT WE'RE SENDING
+    $result = mysqli_query($connection, $query);
+
+    if(!$result) {
+        die('Query failed' . mysqli_error());
+    }
 
 
 
@@ -42,7 +53,7 @@ if(isset($_POST['submit'])) {
 <body>
 <div class="container">
     <div class="col-xs-6">
-        <form action="7.1_login.php" method="post">
+        <form action="7_mysqllogin.php" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" name="username" class="form-control">
