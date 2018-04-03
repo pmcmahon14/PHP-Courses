@@ -6,8 +6,28 @@ if(isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    echo $username;
-    echo $password;
+//NOTE: FOR MAMP, PASSWORD IS ROOT!
+    $connection = mysqli_connect('localhost', 'root', 'root', 'loginapp');
+
+    if($connection) {
+        echo "We have a connection";
+    } else {
+        die("Database connection failed.");
+    }
+
+
+
+
+
+
+    /*    if($username && $password) {
+            echo $username;
+            echo $password;
+        } else {
+            echo 'no way';
+        }
+    */
+
 
 }
 ?>
@@ -22,7 +42,7 @@ if(isset($_POST['submit'])) {
 <body>
 <div class="container">
     <div class="col-xs-6">
-        <form action="7.1_login.php" method="post">
+        <form action="7_mysqllogin.php" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" name="username" class="form-control">
