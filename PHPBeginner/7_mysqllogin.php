@@ -11,17 +11,19 @@ if(isset($_POST['submit'])) {
     $connection = mysqli_init('localhost', 'root', 'root', 'loginapp');
 
     if($connection) {
-        echo "We have a connection";
+        echo "We are connected";
     } else {
         die("Database connection failed.");
     }
 
     //USE INSERT INTO COMMAND TO ADD DATA INTO MYSQL, THEN CONCATENATE
     $query = "INSERT INTO users(username, password) ";
-    $query .="VALUES('$username', '$password')";
+    $query .= "VALUES('$username', '$password')";
 
     //SQL QUERY TAKES TWO ARGUMENTS, FIRST THE CONNECTION TO DATABASE, THEN WHAT WE'RE SENDING
     $result = mysqli_query($connection, $query);
+
+
 
     if(!$result) {
         die('Query failed' . mysqli_error());
