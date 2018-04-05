@@ -2,8 +2,6 @@
 
 //USING CRUD
 
-
-
 //NOTE: FOR MAMP, PASSWORD IS ROOT!
 $connection = mysqli_init('localhost', 'root', 'root', 'loginapp');
 
@@ -13,27 +11,19 @@ if($connection) {
     die("Database connection failed.");
 }
 
-
-
 //SQL COMMAND TO READ DATA
 $query = "SELECT * FROM users";
 
-    echo $query;
+    //echo $query;
 
 //SQL QUERY TAKES TWO ARGUMENTS, FIRST THE CONNECTION TO DATABASE, THEN WHAT WE'RE SENDING
 $result = mysqli_query($connection, $query);
 
+echo $result;
+
 if(!$result) {
     die('Query failed' . mysqli_error());
 }
-
-
-
-
-
-
-
-
 
 ?>
 
