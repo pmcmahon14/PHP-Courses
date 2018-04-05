@@ -18,7 +18,7 @@ if($connection) {
 //SQL COMMAND TO READ DATA
 $query = "SELECT * FROM users";
 
-    echo $query;
+echo $query;
 
 //SQL QUERY TAKES TWO ARGUMENTS, FIRST THE CONNECTION TO DATABASE, THEN WHAT WE'RE SENDING
 $result = mysqli_query($connection, $query);
@@ -50,9 +50,21 @@ if(!$result) {
 
         <?php
 
-        while ($row = mysqli_fetch_row($result)) {
-        //while ($row = mysqli_fetch_assoc($result)) {
+            while ($row = mysqli_fetch_assoc($result)) {
+
+        ?>
+
+        <pre>
+
+            <?php
             print_r($row);
+            ?>
+
+        </pre>
+
+        <?php
+
+
         }
 
         ?>
